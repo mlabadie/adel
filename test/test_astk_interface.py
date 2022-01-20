@@ -1,4 +1,4 @@
-from alinea.adel.astk_interface import AdelWheat
+from alinea.adel.astk_interface import AdelWheat, initialise_stand
 # from alinea.astk.TimeControl import TimeControlSet
 
 
@@ -18,6 +18,8 @@ def test_statistics():
     assert 'green_area' in areas
     pstats = adel.plot_statistics(g)
 
+def test_initialize_stand():
+    g, wheat, domain_area, domain, convUnit = initialise_stand(age=150)
 
 # to be repaired
 # def test_dynamic():
